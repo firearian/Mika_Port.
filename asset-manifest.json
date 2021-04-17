@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/firearian.github.io/static/css/main.9a50d586.chunk.css",
-    "main.js": "/firearian.github.io/static/js/main.31a8ee5c.chunk.js",
-    "main.js.map": "/firearian.github.io/static/js/main.31a8ee5c.chunk.js.map",
-    "runtime-main.js": "/firearian.github.io/static/js/runtime-main.efd6a511.js",
-    "runtime-main.js.map": "/firearian.github.io/static/js/runtime-main.efd6a511.js.map",
-    "static/js/2.af758700.chunk.js": "/firearian.github.io/static/js/2.af758700.chunk.js",
-    "static/js/2.af758700.chunk.js.map": "/firearian.github.io/static/js/2.af758700.chunk.js.map",
-    "index.html": "/firearian.github.io/index.html",
-    "precache-manifest.fb64bffdc19b29548df7ed3a221c21a2.js": "/firearian.github.io/precache-manifest.fb64bffdc19b29548df7ed3a221c21a2.js",
-    "service-worker.js": "/firearian.github.io/service-worker.js",
-    "static/css/main.9a50d586.chunk.css.map": "/firearian.github.io/static/css/main.9a50d586.chunk.css.map",
-    "static/js/2.af758700.chunk.js.LICENSE.txt": "/firearian.github.io/static/js/2.af758700.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/firearian.github.io/static/media/logo.495d93cc.svg"
+    "main.css": "/firearian/static/css/main.9a50d586.chunk.css",
+    "main.js": "/firearian/static/js/main.6129ee9e.chunk.js",
+    "main.js.map": "/firearian/static/js/main.6129ee9e.chunk.js.map",
+    "runtime-main.js": "/firearian/static/js/runtime-main.bf77e6fc.js",
+    "runtime-main.js.map": "/firearian/static/js/runtime-main.bf77e6fc.js.map",
+    "static/js/2.af758700.chunk.js": "/firearian/static/js/2.af758700.chunk.js",
+    "static/js/2.af758700.chunk.js.map": "/firearian/static/js/2.af758700.chunk.js.map",
+    "index.html": "/firearian/index.html",
+    "precache-manifest.d950b993834057e947be01c9bae04be7.js": "/firearian/precache-manifest.d950b993834057e947be01c9bae04be7.js",
+    "service-worker.js": "/firearian/service-worker.js",
+    "static/css/main.9a50d586.chunk.css.map": "/firearian/static/css/main.9a50d586.chunk.css.map",
+    "static/js/2.af758700.chunk.js.LICENSE.txt": "/firearian/static/js/2.af758700.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/firearian/static/media/logo.495d93cc.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.efd6a511.js",
+    "static/js/runtime-main.bf77e6fc.js",
     "static/js/2.af758700.chunk.js",
     "static/css/main.9a50d586.chunk.css",
-    "static/js/main.31a8ee5c.chunk.js"
+    "static/js/main.6129ee9e.chunk.js"
   ]
 }
