@@ -1,0 +1,9 @@
+@media screen and (max-width: 768px) {
+	#m-footer-left-side {
+		width: 100%!important;
+	}
+	#m-footer-right-side {
+		width: 100%!important;
+		font-size: 0.8em!important;
+	}
+}

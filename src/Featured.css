@@ -1,0 +1,24 @@
+#featured {
+	background-color: black!important;
+
+}
+#featured-iframes {
+	display: flex; /* or inline-flex */
+	justify-content: space-between!important;
+	padding: 0em 7em 7em 7em;
+	flex-wrap: wrap;
+}
+.iframeM {
+	border: 0;
+	width: 350px;
+	height: 350px;
+	margin-top: 5em;
+	margin-bottom: 1em;
+}
+
+@media only screen and (max-width: 923px) {
+	#featured-iframes {
+		justify-content: center!important;
+	}
+
+}

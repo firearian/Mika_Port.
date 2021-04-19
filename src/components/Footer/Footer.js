@@ -8,10 +8,8 @@ import classNames from "classnames";
 import { List, ListItem } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
-// @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
-
-import styles from "assets/jss/material-kit-react/components/footerStyle.js";
+import styles from "../../assets/jss/material-kit-react/components/footerStyle.js";
+import "./Footer.css"
 
 const useStyles = makeStyles(styles);
 
@@ -29,7 +27,7 @@ export default function Footer(props) {
   return (
     <footer className={footerClasses+' MFooter'}>
       <div className={classes.container}>
-        <div className={classes.left}>
+        <div className={classes.left} id="m-footer-left-side">
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
               <a
@@ -51,7 +49,7 @@ export default function Footer(props) {
             </ListItem>
           </List>
         </div>
-        <div className={classes.right}>
+        <div className={classes.right} id="m-footer-right-side">
           &copy; {1900 + new Date().getYear()}, made with excitement by{" "}
           <a
             href="#"

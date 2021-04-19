@@ -1,0 +1,48 @@
+.makeStyles-appBar-9 {
+	background-color: #0C7987!important;
+}
+.MuiAppBar-colorPrimary {
+	color: white!important;
+}
+.makeStyles-fixed-11 {
+	position: sticky!important;
+	margin-bottom: 0!important;
+}
+#BannerSocials {
+	right: 0.5%;
+	text-align: right;
+}
+.BannerElements {
+	max-width: 23%!important;
+	z-index: 10000;
+	top: auto;
+	width: inherit;
+	position: fixed;
+}
+#BannerSocials a {
+	margin: 1% 1.5%;
+	box-shadow: none!important;
+    background-color: #2e3131;
+}
+#BannerSocials a:focus {
+    background-color: #2e3131!important;
+}
+#BannerSocials a:hover {
+    background-color: #3d3d3d!important;
+}
+#GoBack {
+	left: 4.5%;
+    background-color: #2e3131;
+}
+@media only screen and (max-width: 959px) {
+	#BannerSocials {
+		display: none;
+	}
+	#GoBack {
+		display: none;
+	}
+	
+}
+.makeStyles-container-12 {
+	justify-content: center!important;
+}

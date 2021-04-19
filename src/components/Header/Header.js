@@ -11,20 +11,19 @@ import IconButton from "@material-ui/core/IconButton";
 import Button from "@material-ui/core/Button";
 import Hidden from "@material-ui/core/Hidden";
 import Drawer from "@material-ui/core/Drawer";
-import Icon from '@material-ui/core/Icon';
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 // @material-ui/icons
-import Menu from "@material-ui/icons/Menu";
+import Menu from "@material-ui/icons/Menu.js";
 // core components
-import styles from "assets/jss/material-kit-react/components/headerStyle.js";
+import styles from "../../assets/jss/material-kit-react/components/headerStyle.js";
+import "./CustomHeaderStyles.css"
 
 import FacebookIcon from '../../components/Icon/FacebookIcon.js'
 import TwitterIcon from '../../components/Icon/TwitterIcon.js'
 import InstagramIcon from '../../components/Icon/InstagramIcon.js'
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+//import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
-import { useLocation } from "react-router";
 const CustomIconButton = withStyles({
   root: {
     margin: '1%',
@@ -87,9 +86,11 @@ export default function Header(props) {
   const brandComponent = <Button href='#' className={classes.title}>{brand}</Button>;
   return (
     <AppBar className={appBarClasses}>
-      <div id='BackHome' className={'BannerElements'}>
+
+{/*       <div id='BackHome' className={'BannerElements'}>
         <Button id='GoBack' className={'makeStyles-button-53'} variant="contained" color="secondary" href='https://thelostthoughts.com/' startIcon={<Icon>arrow_back</Icon>}>Go Back</Button>
       </div>
+*/}
       <Toolbar className={classes.container}>
         <div className={classes}>
           {leftLinks !== undefined ? (
@@ -115,9 +116,9 @@ export default function Header(props) {
         </Hidden>
       </Toolbar>
       <div id='BannerSocials' className={'BannerElements'}>
-        <CustomIconButton className={'makeStyles-justIcon-74 makeStyles-round-71 makeStyles-button-53'} justIcon href='' round color="trasparent" ><FacebookIcon /></CustomIconButton>
-        <CustomIconButton className={'makeStyles-justIcon-74 makeStyles-round-71 makeStyles-button-53'} justIcon href='' round color="trasparent" ><TwitterIcon /></CustomIconButton>
-        <CustomIconButton className={'makeStyles-justIcon-74 makeStyles-round-71 makeStyles-button-53'} justIcon href='' round color="trasparent" ><InstagramIcon /></CustomIconButton>
+        <CustomIconButton className={'makeStyles-justIcon-74 makeStyles-round-71 makeStyles-button-53'} justIcon target="_blank" href='https://facebook.com/mikattemusic' round color="trasparent" ><FacebookIcon /></CustomIconButton>
+        <CustomIconButton className={'makeStyles-justIcon-74 makeStyles-round-71 makeStyles-button-53'} justIcon target="_blank" href='https://twitter.com/mikattemusic' round color="trasparent" ><TwitterIcon /></CustomIconButton>
+        <CustomIconButton className={'makeStyles-justIcon-74 makeStyles-round-71 makeStyles-button-53'} justIcon target="_blank" href='https://www.instagram.com/mikattemusic' round color="trasparent" ><InstagramIcon /></CustomIconButton>
       </div>
       <Hidden mdUp implementation="js">
         <Drawer
@@ -144,9 +145,9 @@ export default function Header(props) {
             {rightLinks}
             <ul className={'MuiList-root makeStyles-list-75 MuiList-padding'}>
               <li className={'MuiListItem-root makeStyles-listItem-76 MuiListItem-gutters DropdownSocials'} style={{textAlign:'center'}}>
-              <CustomIconButton className={'makeStyles-justIcon-74 makeStyles-round-71 makeStyles-button-53'} justIcon href='' round color="trasparent" ><FacebookIcon /></CustomIconButton>
-              <CustomIconButton className={'makeStyles-justIcon-74 makeStyles-round-71 makeStyles-button-53'} justIcon href='' round color="trasparent" ><TwitterIcon /></CustomIconButton>
-              <CustomIconButton className={'makeStyles-justIcon-74 makeStyles-round-71 makeStyles-button-53'} justIcon href='' round color="trasparent" ><InstagramIcon /></CustomIconButton>
+              <CustomIconButton className={'makeStyles-justIcon-74 makeStyles-round-71 makeStyles-button-53'} justIcon target="_blank" href='https://facebook.com/mikattemusic' round color="trasparent" ><FacebookIcon /></CustomIconButton>
+              <CustomIconButton className={'makeStyles-justIcon-74 makeStyles-round-71 makeStyles-button-53'} justIcon target="_blank" href='https://twitter.com/mikattemusic' round color="trasparent" ><TwitterIcon /></CustomIconButton>
+              <CustomIconButton className={'makeStyles-justIcon-74 makeStyles-round-71 makeStyles-button-53'} justIcon target="_blank" href='https://www.instagram.com/mikattemusic' round color="trasparent" ><InstagramIcon /></CustomIconButton>
               </li>
             </ul>
           </div>
