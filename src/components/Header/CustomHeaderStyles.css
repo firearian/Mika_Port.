@@ -1,8 +1,6 @@
 .MuiAppBar-root {
 	background-color: #0C7987!important;
-}
-.MuiAppBar-colorPrimary {
-	color: white!important;
+	justify-content: center;
 }
 .makeStyles-fixed-11 {
 	position: sticky!important;
@@ -22,13 +20,13 @@
 #BannerSocials a {
 	margin: 1% 1.5%;
 	box-shadow: none!important;
-    background-color: #2e3131;
+    background-color: #005558;
 }
 #BannerSocials a:focus {
-    background-color: #2e3131!important;
+    background-color: #04787c!important;
 }
 #BannerSocials a:hover {
-    background-color: #3d3d3d!important;
+    background-color: #04787c!important;
 }
 #GoBack {
 	left: 4.5%;

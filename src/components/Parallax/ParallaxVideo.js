@@ -11,6 +11,7 @@ import ReactPlayer from 'react-player'
 
 // core components
 import styles from "../../assets/jss/material-kit-react/components/parallaxStyle.js";
+import "./ParallaxVideo.css"
 
 
 const useStyles = makeStyles(styles);
@@ -58,8 +59,8 @@ export default function Parallax(props) {
       }}
     >
       {children}
-      <ReactPlayer 
-      url='https://www.youtube.com/watch?v=tAKjvz3Wphs'
+      <ReactPlayer
+      url='http://thelostthoughts.com/Michaela/Assets/FTTheme.mp4'
       width='100%'
       height='100%'
       controls

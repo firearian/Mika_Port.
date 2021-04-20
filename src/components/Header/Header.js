@@ -15,19 +15,24 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 // @material-ui/icons
 import Menu from "@material-ui/icons/Menu.js";
-// core components
+// styles
 import styles from "../../assets/jss/material-kit-react/components/headerStyle.js";
 import "./CustomHeaderStyles.css"
+import buttonStyles from "../../assets/jss/material-kit-react/components/buttonStyle"
+import linkStyles from "../../assets/jss/material-kit-react/components/headerLinksStyle.js";
 
+// icon imports
 import FacebookIcon from '../../components/Icon/FacebookIcon.js'
 import TwitterIcon from '../../components/Icon/TwitterIcon.js'
 import InstagramIcon from '../../components/Icon/InstagramIcon.js'
 //import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
+
+// Custom buttom creation
 const CustomIconButton = withStyles({
   root: {
     margin: '1%',
-    backgroundColor: '#2e3131',
+    backgroundColor: '#2e3131!important',
     '&:hover': {
       backgroundColor: '#3d3d3d',
     },
@@ -38,10 +43,29 @@ const CustomIconButton = withStyles({
 })(Button);
 
 
+// custom styles addition
+const useStyles = makeStyles((styles) => ({
+  appBar: {
+    position: 'sticky',
+    marginBottom: '0',
+  },
+  container: {
+    position: 'sticky',
+    justifyContent: 'center',
+    color: 'white'
+  },
+  title: {
+    color: 'white',
+  }
+}));
 
-const useStyles = makeStyles(styles);
+const useButtonStyles = makeStyles(buttonStyles);
+const uselinkStyles = makeStyles(linkStyles);
+
 
 export default function Header(props) {
+  const linkClasses = uselinkStyles();
+  const buttonClasses = useButtonStyles();
   const classes = useStyles();
   const [mobileOpen, setMobileOpen] = React.useState(false);
   React.useEffect(() => {
@@ -116,9 +140,9 @@ export default function Header(props) {
         </Hidden>
       </Toolbar>
       <div id='BannerSocials' className={'BannerElements'}>
-        <CustomIconButton className={'makeStyles-justIcon-74 makeStyles-round-71 makeStyles-button-53'} justIcon target="_blank" href='https://facebook.com/mikattemusic' round color="trasparent" ><FacebookIcon /></CustomIconButton>
-        <CustomIconButton className={'makeStyles-justIcon-74 makeStyles-round-71 makeStyles-button-53'} justIcon target="_blank" href='https://twitter.com/mikattemusic' round color="trasparent" ><TwitterIcon /></CustomIconButton>
-        <CustomIconButton className={'makeStyles-justIcon-74 makeStyles-round-71 makeStyles-button-53'} justIcon target="_blank" href='https://www.instagram.com/mikattemusic' round color="trasparent" ><InstagramIcon /></CustomIconButton>
+        <CustomIconButton className={`${buttonClasses.button} ${buttonClasses.round} ${buttonClasses.justIcon}`} target="_blank" href='https://facebook.com/mikattemusic' color="trasparent" ><FacebookIcon /></CustomIconButton>
+        <CustomIconButton className={`${buttonClasses.button} ${buttonClasses.round} ${buttonClasses.justIcon}`} target="_blank" href='https://twitter.com/mikattemusic' color="trasparent" ><TwitterIcon /></CustomIconButton>
+        <CustomIconButton className={`${buttonClasses.button} ${buttonClasses.round} ${buttonClasses.justIcon}`} target="_blank" href='https://www.instagram.com/mikattemusic' color="trasparent" ><InstagramIcon /></CustomIconButton>
       </div>
       <Hidden mdUp implementation="js">
         <Drawer
@@ -131,25 +155,25 @@ export default function Header(props) {
           onClose={handleDrawerToggle}
         >
           <div className={classes.appResponsive}>
-          <List className={'makeStyles-list-41'}>
-            <ListItem className={'makeStyles-listItem-42'}>
+          <List className={linkClasses.list}>
+            <ListItem className={linkClasses.listItem}>
               <Button
-                href="#aboutme"
+                href="https://thelostthoughts.com"
                 color="transparent"
-                className={'makeStyles-button-53 makeStyles-transparent-67 makeStyles-navLink-44'}
+                className={linkClasses.navLink}
               > GO BACK
               </Button>
             </ListItem>
           </List>
             {leftLinks}
             {rightLinks}
-            <ul className={'MuiList-root makeStyles-list-75 MuiList-padding'}>
-              <li className={'MuiListItem-root makeStyles-listItem-76 MuiListItem-gutters DropdownSocials'} style={{textAlign:'center'}}>
-              <CustomIconButton className={'makeStyles-justIcon-74 makeStyles-round-71 makeStyles-button-53'} justIcon target="_blank" href='https://facebook.com/mikattemusic' round color="trasparent" ><FacebookIcon /></CustomIconButton>
-              <CustomIconButton className={'makeStyles-justIcon-74 makeStyles-round-71 makeStyles-button-53'} justIcon target="_blank" href='https://twitter.com/mikattemusic' round color="trasparent" ><TwitterIcon /></CustomIconButton>
-              <CustomIconButton className={'makeStyles-justIcon-74 makeStyles-round-71 makeStyles-button-53'} justIcon target="_blank" href='https://www.instagram.com/mikattemusic' round color="trasparent" ><InstagramIcon /></CustomIconButton>
-              </li>
-            </ul>
+            <List className={linkClasses.list}>
+              <ListItem className={linkClasses.listItem} style={{textAlign:'center'}}>
+              <CustomIconButton className={`${buttonClasses.button} ${buttonClasses.round} ${buttonClasses.justIcon}`} target="_blank" href='https://facebook.com/mikattemusic' color="trasparent" ><FacebookIcon /></CustomIconButton>
+              <CustomIconButton className={`${buttonClasses.button} ${buttonClasses.round} ${buttonClasses.justIcon}`} target="_blank" href='https://twitter.com/mikattemusic' color="trasparent" ><TwitterIcon /></CustomIconButton>
+              <CustomIconButton className={`${buttonClasses.button} ${buttonClasses.round} ${buttonClasses.justIcon}`} target="_blank" href='https://www.instagram.com/mikattemusic' color="trasparent" ><InstagramIcon /></CustomIconButton>
+              </ListItem>
+            </List>
           </div>
         </Drawer>
       </Hidden>

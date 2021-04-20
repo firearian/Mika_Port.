@@ -14,6 +14,8 @@
 }
 #Cemail {
 	font-size: 2em;
-	color: #C293E1!important;
 	margin: 21px 0;
+}
+#Cemail a {
+	color: #C293E1!important;
 }

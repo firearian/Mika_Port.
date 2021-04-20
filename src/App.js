@@ -11,6 +11,8 @@ import Footer from "./components/Footer/Footer.js";
 import Button from "./components/CustomButtons/Button.js";
 import Divider from '@material-ui/core/Divider';
 import Parallax from "./components/Parallax/ParallaxVideo.js";
+import Grid from '@material-ui/core/Grid';
+
 // sections for this page
 import HeaderLinks from "./components/Header/HeaderLinks.js";
 import LeftHeaderLinks from "./components/Header/LeftHeaderLinks.js";
@@ -28,7 +30,17 @@ import "./App.css";
 import "./Featured.css";
 import "./Contact.css";
 
-const useStyles = makeStyles(styles);
+const useStyles = makeStyles((styles) => ({
+  main: {
+    zIndex: '3',
+    position: 'relative',
+  },
+  grid: {
+    width: '100%',
+    margin: '0px',
+    padding: '10% 0%',
+  },
+}));
 
 const CustomIconButton = withStyles({
   root: {
@@ -83,19 +95,30 @@ export default function App(props) {
       <Divider variant="middle" />
 
       <div id='aboutme' className={classNames(classes.main)} >
-        <main>
-          <div id={'portimage'}>
-            <img src="https://www.thelostthoughts.com/Michaela/Assets/Headshot.png" alt="Image" />
-          </div>
-          <div id={'portcontent'}>
-            <div id={'porttitle'} className='Titles'>
-              <span >ABOUT ME</span>
-            </div>
-            <div id={'porttext'}>
-              <p >Michaela Cornelius is an Auckland-based composer who has recently completed her BMus Honours at the University of Auckland, specialising in Composition. On her way to establishing herself as a freelance composer, Michaela is currently involved as a composer and sound designer for video games and podcasts; releases include G’Night Teddy, Confuddled and Don’t Forget Your Towel. With a focus on vocal and instrumental composition, her works often incorporate aspects of nature, fantasy, and self-reflection. Her research has focused on the application of constraints and RNG in the compositional process. Recent performances of works include the Douglas Lilburn Composition Prize concert, APO and NZSO orchestral readings, and her works have been recorded as part of the SOMSA Recording Project, a student-led initiative at the University of Auckland.</p>
-            </div>
-          </div>
-        </main>
+        <Grid 
+          container
+          direction="row"
+          justify="center"
+          alignItems="center"
+          spacing={2}
+          className={classes.grid}
+        >
+            <Grid item lg={5} className={classes.Griditem}>
+              <div id={'portimage'}>
+                <img src="https://www.thelostthoughts.com/Michaela/Assets/Headshot.png" alt="Image" />
+              </div>
+            </Grid>
+            <Grid item lg={5} className={classes.Griditem}>
+              <div id={'portcontent'}>
+                <div id={'porttitle'} className='Titles'>
+                  <span >ABOUT ME</span>
+                </div>
+                <div id={'porttext'}>
+                  <p >Michaela Cornelius is an Auckland-based composer who has recently completed her BMus Honours at the University of Auckland, specialising in Composition. On her way to establishing herself as a freelance composer, Michaela is currently involved as a composer and sound designer for video games and podcasts; releases include G’Night Teddy, Confuddled and Don’t Forget Your Towel. With a focus on vocal and instrumental composition, her works often incorporate aspects of nature, fantasy, and self-reflection. Her research has focused on the application of constraints and RNG in the compositional process. Recent performances of works include the Douglas Lilburn Composition Prize concert, APO and NZSO orchestral readings, and her works have been recorded as part of the SOMSA Recording Project, a student-led initiative at the University of Auckland.</p>
+                </div>
+              </div>
+            </Grid>
+        </Grid>
       </div>
 
       <Divider variant="middle" />
